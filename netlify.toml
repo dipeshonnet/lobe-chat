@@ -7,6 +7,9 @@
     ACCESS_CODE = ""
   }
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [template.environment]
   OPENAI_API_KEY = "set your OpenAI API Key"
-  ACCESS_CODE = "set your password to protect your api key"
+  ACCESS_CODE = "set your password to protect your API key"
