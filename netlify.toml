@@ -1,8 +1,12 @@
 [build]
   command = "NODE_OPTIONS='--max_old_space_size=4096' pnpm run build"
-  environment = { NODE_OPTIONS = "--max_old_space_size=4096", OPENAI_API_KEY}
   publish = ".next"
+  environment = { 
+    NODE_OPTIONS = "--max_old_space_size=4096",
+    OPENAI_API_KEY = "", 
+    ACCESS_CODE = ""
+  }
 
 [template.environment]
-OPENAI_API_KEY = "set your OpenAI API Key"
-ACCESS_CODE = "set your password to protect your api key"
+  OPENAI_API_KEY = "set your OpenAI API Key"
+  ACCESS_CODE = "set your password to protect your api key"
