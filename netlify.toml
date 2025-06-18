@@ -1,10 +1,15 @@
 [build]
-command = "rm -rf .next node_modules/.cache && pnpm run build"
-publish = ".next"
+  command = "NODE_OPTIONS='--max_old_space_size=4096' pnpm run build"
+  publish = ".next"
 
 [build.environment]
-NODE_OPTIONS = "--max-old-space-size=4096"
+  NODE_OPTIONS = "--max_old_space_size=4096"
+  OPENAI_API_KEY = ""
+  ACCESS_CODE = ""
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [template.environment]
-OPENAI_API_KEY = "set your OpenAI API Key"
-ACCESS_CODE = "set your password to protect your api key"
+  OPENAI_API_KEY = "set your OpenAI API Key"
+  ACCESS_CODE = "set your password to protect your API key"
